@@ -1,0 +1,13 @@
+build/
+output/
+legacy/
+
+.vscode
+
+*.mp4
+# *.blend
+*.blend1
+*.blend2
+blender_*
+
+*.sh

@@ -1,0 +1,16 @@
+free_final_time                     true
+interpolate_input                   true
+
+K                                   15
+
+nondimensionalize                   true
+
+weight_time                         1.
+weight_trust_region_time            1.
+weight_trust_region_trajectory      50.
+weight_virtual_control              1000.
+
+nu_tol                              1e-5
+delta_tol                           1e-3
+
+max_iterations                      15

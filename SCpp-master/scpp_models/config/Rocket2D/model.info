@@ -1,0 +1,71 @@
+; ----- model definitions -----
+g_I
+{
+    (0)   0.0
+    (1)   -9.81 ; m/s²
+}
+
+J_B     5000000.
+
+r_T_B
+{
+    (0)   0.
+    (1)   -15.
+}
+
+m       24000.
+
+; ----- initial values -----
+; position
+r_init
+{
+    (0)    -200.
+    (1)    800.
+}
+; velocity
+v_init
+{
+    (0)     0.
+    (1)     -100.
+}
+; orientation
+eta_init    -20.
+
+; angular velocity
+w_init      0.
+
+; ----- final values -----
+final_time      12.
+; position
+r_final
+{
+    (0)    0.
+    (1)    0.
+}
+; velocity
+v_final
+{
+    (0)     0.
+    (1)     -1.
+}
+; orientation
+eta_final   0.
+; angular velocity
+w_final     0.
+
+; enable for SC and disable for MPC/LQR
+constrain_initial_final     true
+; disable for SC and enable for MPC/LQR
+add_slack_variables         false
+
+; thrust
+T_min       10000.
+T_max       420000.
+; maximum gimbal
+gimbal_max  15.
+; glideslope angle
+gamma_gs    45.
+; maximum angle
+theta_max   60.
+; maximum angluar velocity
+w_B_max     20.
